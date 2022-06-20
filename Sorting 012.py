@@ -1,5 +1,6 @@
 #Also called the DNF Method
 #The Dutch National flag method also used to sort os 1s and 2s 
+#https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/
 
 def sort012( array):
     left, right, current = 0, len(array) - 1, 0
