@@ -3,22 +3,31 @@
 #efficient solution is traverse array from left to right. If we see a 1, we increment count
 #and compare it with maximum so far. If we see a 0, we reset count as 0
 
-def getMaxLength(array):
-    n = len(array)
-    count=0
-    maximum=0
-    for i in range(n):
-        if array[i] == 1 :
-            count +=1
-        else :
-            count =0
-    maximum=count
+def getMaxLength(arr, n):
+    # initialize count
+    count = 0
 
-    print(maximum)
+    # initialize max
+    result = 0
 
-arr = [1, 1, 0, 0, 1, 0, 1,0, 1, 1, 1, 1]
+    for i in range(0, n):
+
+        # Reset count when 0 is found
+        if (arr[i] == 0):
+            count = 0
+
+        # If 1 is found, increment count
+        # and update result if count
+        # becomes more.
+        else:
+
+            # increase count
+            count += 1
+            result = max(result, count)
+
+    return result
 arr2=[1,0,1,1,0,1]
-#n=len(arr)
-getMaxLength(arr)
-getMaxLength(arr2)
+n=len(arr2)
+#getMaxLength(arr)
+print(getMaxLength(arr2,n))
 
